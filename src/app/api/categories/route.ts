@@ -1,8 +1,7 @@
 import { client } from "@/sanity/lib/client";
-import { NextRequest } from "next/server";
 export const dynamic = 'force-static'
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const categories = await client.fetch(`*[_type == "categories"] {
           _id,
@@ -14,6 +13,7 @@ export async function GET(req: NextRequest) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
+    console.log(error)
     return new Response(
       JSON.stringify({ error: "Failed to fetch categories" }),
       {

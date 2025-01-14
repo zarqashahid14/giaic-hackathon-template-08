@@ -1,7 +1,6 @@
 import { client } from "@/sanity/lib/client";
-import { NextRequest } from "next/server";
 export const dynamic = 'force-static'
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const products = await client.fetch(`*[_type == "products"] {
   _id,
