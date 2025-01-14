@@ -1,27 +1,37 @@
 {
-  "name": "template9",
+  "name": "template8",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "node scripts/migrate.mjs",
+    "cleanup": "node scripts/cleanup.mjs"
   },
   "dependencies": {
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.69.0",
+    "dotenv": "^16.4.7",
+    "next": "15.1.4",
+    "next-sanity": "^9.8.35",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.4"
+    "sanity": "^3.69.0",
+    "styled-components": "^6.1.14",
+    "ts-node": "^10.9.2",
+    "url": "^0.11.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
